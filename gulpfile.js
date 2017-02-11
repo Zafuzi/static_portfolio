@@ -8,7 +8,7 @@ gulp.task('html', function() {
     return watch('client/templates/*.pug', function() {
         gulp.src('client/templates/*.pug')
             .pipe(pug())
-            .pipe(gulp.dest('build/html'))
+            .pipe(gulp.dest(''))
     });
 });
 
@@ -17,7 +17,7 @@ gulp.task('css', function() {
         gulp.src('client/templates/*.less')
             .pipe(less())
             .pipe(minifyCSS())
-            .pipe(gulp.dest('build/css'))
+            .pipe(gulp.dest('css'))
     });
 });
 
