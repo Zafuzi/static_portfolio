@@ -1,0 +1,32 @@
+doctype html
+block config
+html(lang="en")
+    head
+        title #{title} | Zachary Foutz
+
+        //- Meta Tags
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author" content="Zachary Foutz - Zafuzi Industries")
+        meta(name="description" content="Zachary Foutz is a web engineer with 5 years of experience. He specializes in front end design and writes code in a myriad of languages.")
+
+        
+        //- Imports
+        include layout-imports
+        block imports
+
+        //- Styles
+        link(rel="stylesheet" href="css/styles.css")
+        block styles
+
+    body
+        //- Banner
+        section#intro
+            img.banner(src="https://unsplash.it/1920/1080")
+            div#intro_message
+                h1 Zachary Foutz
+                p Web Engineer
+        //- Main Content
+        block content
+
+        script(type="text/javascript" src="bower_components/modernizer/modernizr.js")
+        script(type="text/javascript" src="./bower_components/webcomponentsjs/webcomponents.min.js")

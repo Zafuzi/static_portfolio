@@ -3,9 +3,13 @@
 body,
 html {
     margin: 0;
-    font-size: 16px;
+    padding: 0;
+    font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 2;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #eee;
 }
 .light{
     color: #9e9e9e;
@@ -35,15 +39,69 @@ html {
     color: white;
     background: rgba(0,0,0, .5);
 }
-button{
-    padding: 16px 25px;
-    border-radius: 3px;
-    background: @main-color;
-    border: none;
+
+//Sections
+section{
+    min-height: 400px;
+}
+#s1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#s1{
+    background: #eee;
+}
+#s1 #about-me{
+    width: calc(50% - 1em);
+    padding: .5em;
+    margin: 1rem auto;
+}
+#s2, #s3{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#s2 h2{
+    width: 100%;
+    text-align: center;
 }
 
-//Section 1
-#s1{
-    width: calc(100% - 1em);
-    padding: 1em;
+#s3{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em 0;
+    margin-bottom: 1rem;
+    background: #eee;
+    color: #555;
+}
+#s3 form{
+    width: 50%;
+    margin: auto;
+}
+
+// Gallery
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gallery paper-card{
+    width: calc(33.33% - 2em);
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    margin: .5em;
+    padding: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    .gallery paper-card{
+        width: calc(100% - 1em);
+    }
 }

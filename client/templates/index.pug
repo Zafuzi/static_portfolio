@@ -1,22 +1,28 @@
-doctype html
-html(lang="en")
-    head
-        title Zachary Foutz
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(rel="stylesheet" href="css/styles.css")
-        link(rel="import" href="./bower_components/polymer/polymer.html")
-        link(rel="import" href="./bower_components/paper-header-panel/paper-header-panel.html") 
-        link(rel="import" href="./bower_components/paper-toolbar/paper-toolbar.html") 
-        link(rel="import" href="./bower_components/paper-card/paper-card.html") 
+//- index.pug
+extends layout.pug
 
-    body
-        section#intro
-            img.banner(src="https://unsplash.it/1920/1080")
-            div#intro_message
-                h1 Zachary Foutz
-                p Web Engineer
+block imports
+    link(rel="import" href="bower_components/paper-carousel/paper-carousel.html")
+    link(rel="import" href="bower_components/iron-form/iron-form.html")
+    link(rel="import" href="bower_components/paper-input/paper-input.html")
+    link(rel="import" href="bower_components/paper-button/paper-button.html")
+
+block config
+    -var title = "Home";
+
+block content
+    section#s1
+        paper-card#about-me
+            div.card-content
+                h2 About Me
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida turpis neque, eget pretium risus ultricies quis. Pellentesque arcu nisl, commodo at varius vitae, ultrices ut nibh. Donec semper varius ante eget dignissim. Maecenas felis dui, elementum a lorem vel, consequat condimentum eros. Nullam non vehicula lorem. Donec vitae ultrices sem, sit amet vehicula lorem. Pellentesque fermentum, massa nec aliquam pretium, ligula nisi aliquam eros, in fermentum quam justo non sapien. Curabitur aliquam, mauris imperdiet semper ultricies, nulla justo luctus arcu, a iaculis neque tellus fermentum sapien.
+    section#s2
+        include projects
         
-        section#s1
-            h2 I code for a living. And other stuff
-
-        script(src="./bower_components/webcomponentsjs/webcomponents.min.js")
+    section#s3
+        h2 Contact Me
+        form(is="iron-form" id="form" method="post")
+            paper-input(name="name" label="name")
+            paper-input(name="email" label="email")
+            paper-input(name="message"  type="textbox" label="message")
+            paper-button(raised onclick="submitForm()") Submit

@@ -1,11 +1,26 @@
 {
-  "name": "pug_test",
+  "name": "static_portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple portfolio for Zachary Foutz",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp-csso": "^2.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zafuzi/static_portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zafuzi/static_portfolio/issues"
+  },
+  "homepage": "https://github.com/Zafuzi/static_portfolio#readme"
 }
