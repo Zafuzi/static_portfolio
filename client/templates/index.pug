@@ -11,18 +11,15 @@ block config
     -var title = "Home";
 
 block content
+    section#intro
+        div#intro_message
+            h1 Zachary Foutz | Web Engineer
+            paper-input(name="search" label="search")#search
     section#s1
         paper-card#about-me
             div.card-content
-                h2 About Me
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida turpis neque, eget pretium risus ultricies quis. Pellentesque arcu nisl, commodo at varius vitae, ultrices ut nibh. Donec semper varius ante eget dignissim. Maecenas felis dui, elementum a lorem vel, consequat condimentum eros. Nullam non vehicula lorem. Donec vitae ultrices sem, sit amet vehicula lorem. Pellentesque fermentum, massa nec aliquam pretium, ligula nisi aliquam eros, in fermentum quam justo non sapien. Curabitur aliquam, mauris imperdiet semper ultricies, nulla justo luctus arcu, a iaculis neque tellus fermentum sapien.
+                h2 About Zach
+                p Zach is a student developer hell bent on building something awesome. He doesn't care what language he uses, or how long it takes, he just wants to code.
     section#s2
-        include projects
-        
-    section#s3
-        h2 Contact Me
-        form(is="iron-form" id="form" method="post")
-            paper-input(name="name" label="name")
-            paper-input(name="email" label="email")
-            paper-input(name="message"  type="textbox" label="message")
-            paper-button(raised onclick="submitForm()") Submit
+        paper-card
+            include projects
