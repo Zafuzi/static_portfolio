@@ -1,26 +1,26 @@
 {
-  "name": "static_portfolio",
-  "description": "Simple Portfolio for Zachary Foutz",
-  "main": "gulpfile.js",
-  "authors": [
-    "Zafuzi <zacharyfoutz@gmail.com>"
-  ],
-  "license": "ISC",
-  "homepage": "https://github.com/Zafuzi/static_portfolio",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "paper-carousel": "Redbility/paper-carousel#^1.1.5",
-    "paper-elements": "polymerelements/paper-elements#^1.0.7",
-    "polymer": "^1.7.1",
-    "modernizer": "^2.8.2",
-    "normalize-css": "normalize.css#^5.0.0",
-    "iron-elements": "polymerelements/iron-elements#^1.0.10"
-  }
+    "name": "static_portfolio",
+    "description": "Simple Portfolio for Zachary Foutz",
+    "main": "gulpfile.js",
+    "authors": [
+        "Zafuzi <zacharyfoutz@gmail.com>"
+    ],
+    "license": "ISC",
+    "homepage": "https://github.com/Zafuzi/static_portfolio",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "paper-elements": "polymerelements/paper-elements#^1.0.7",
+        "polymer": "^1.7.1",
+        "modernizer": "^2.8.2",
+        "normalize-css": "normalize.css#^5.0.0",
+        "iron-elements": "polymerelements/iron-elements#^1.0.10",
+        "jquery": "^3.1.1"
+    }
 }

@@ -1,24 +1,89 @@
 //- index.pug
 extends layout.pug
 
-block imports
-    link(rel="import" href="bower_components/paper-carousel/paper-carousel.html")
-    link(rel="import" href="bower_components/paper-input/paper-input.html")
-    link(rel="import" href="bower_components/paper-button/paper-button.html")
-
 block config
     -var title = "Home";
 
 block content
     section#intro
         div#intro_message
-            h1 Zachary Foutz | Web Engineer
-            paper-input(name="search" label="search")#search
+            h1 Zachary Foutz
+            small Web Engineer
+            br
+            include contact
     section#s1
-        paper-card#about-me
-            div.card-content
-                h2 About Zach
-                p Zach is a student developer hell bent on building something awesome. He doesn't care what language he uses, or how long it takes, he just wants to code.
-    section#s2
         paper-card
             include projects
+    section#s2
+        paper-card
+            h2 Update
+            div#blog
+
+block scripts
+    script(type="text/javascript").
+        $(function(){
+            var blogs = [];
+            let updates = $.get("blog/updates.json", function(data){
+                data.map(b => {
+                    var container = $("<div class='post'>");
+                    var title = $("<h4>");
+                    var date = $("<span class='date'>");
+                    var content = $("<p class='content'>");
+
+                    title.html(b.title);
+                    date.html(b.date);
+                    content.html(b.content);
+
+                    container.append(title, date, content);
+                    $("#blog").prepend(container);
+                });
+            });
+            let uptimeChecker = [
+                { 
+                    name: "JBVentures",
+                    url: "https://zfoutz.com/clients/jbventures/",
+                    id: "uptime_jbventures"
+                }, 
+                {
+                    name: "Shear Elegance",
+                    url: "https://zfoutz.com/clients/shear-elegance",
+                    id: "uptime_shear"
+                }, 
+                {
+                    name: "Newly Read",
+                    url: "http://newlyread.com",
+                    id: "uptime_newlyread"
+                }
+            ];
+            uptimeChecker.map(uptime => {
+                fetch(uptime.url)
+                .then(response => {
+                    //console.log(response);
+                    var el = $("#" + uptime.id);
+                    //console.log(el);
+                    switch(response.status){
+                        case 502:
+                            $(el).text("down");
+                            $(el).css({
+                                background: 'red'
+                            });
+                            //console.log("Bad Gateway");
+                            break;
+
+                        case 200:
+                            $(el).text("ok");
+                            $(el).css({
+                                background: 'green'
+                            });
+                            //console.log("OK");
+                            break;
+
+                        default:
+                            $(el).text("unknown");
+                            //console.log("unknown");
+                            break;
+                    }
+                });
+            });
+            
+        });
