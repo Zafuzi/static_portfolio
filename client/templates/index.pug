@@ -56,14 +56,14 @@ block scripts
                 }
             ];
             uptimeChecker.map(uptime => {
-                fetch(uptime.url)
+                fetch("https://crossorigin.me/" + uptime.url)
                 .then(response => {
                     //console.log(response);
                     var el = $("#" + uptime.id);
                     //console.log(el);
                     switch(response.status){
                         case 502:
-                            $(el).text("down");
+                            $(el).text("status: down");
                             $(el).css({
                                 background: 'red'
                             });
@@ -71,7 +71,7 @@ block scripts
                             break;
 
                         case 200:
-                            $(el).text("ok");
+                            $(el).text("status: ok");
                             $(el).css({
                                 background: 'green'
                             });
@@ -79,7 +79,7 @@ block scripts
                             break;
 
                         default:
-                            $(el).text("unknown");
+                            $(el).text("status: unknown");
                             //console.log("unknown");
                             break;
                     }
