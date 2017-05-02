@@ -14,30 +14,32 @@ block content
     section#s1
         paper-card
             include projects
-    section#s2
-        paper-card
-            h2 Update
-            div#blog
+    //- Blog section, temp disabled
+    //- section#s2
+    //-     paper-card
+    //-         h2 Update
+    //-         div#blog
 
 block scripts
     script(type="text/javascript").
         $(function(){
-            var blogs = [];
-            let updates = $.get("blog/updates.json", function(data){
-                data.map(b => {
-                    var container = $("<div class='post'>");
-                    var title = $("<h4>");
-                    var date = $("<span class='date'>");
-                    var content = $("<p class='content'>");
+            //-  Temp disabled accessing blog information
+            //- var blogs = [];
+            //- let updates = $.get("blog/updates.json", function(data){
+            //-     data.map(b => {
+            //-         var container = $("<div class='post'>");
+            //-         var title = $("<h4>");
+            //-         var date = $("<span class='date'>");
+            //-         var content = $("<p class='content'>");
 
-                    title.html(b.title);
-                    date.html(b.date);
-                    content.html(b.content);
+            //-         title.html(b.title);
+            //-         date.html(b.date);
+            //-         content.html(b.content);
 
-                    container.append(title, date, content);
-                    $("#blog").prepend(container);
-                });
-            });
+            //-         container.append(title, date, content);
+            //-         $("#blog").prepend(container);
+            //-     });
+            //- });
             let uptimeChecker = [
                 { 
                     name: "JBVentures",
