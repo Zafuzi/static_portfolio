@@ -8,84 +8,66 @@ block content
     section#intro
         div#intro_message
             h1 Zachary Foutz
-            small Web Engineer
-            br
             include contact
     section#s1
-        paper-card
+        div.card
+            include education
+    section#s2
+        div.card
             include projects
-    //- Blog section, temp disabled
-    //- section#s2
-    //-     paper-card
-    //-         h2 Update
-    //-         div#blog
-
-block scripts
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-73276036-1', 'auto');
+        ga('send', 'pageview');
     script(type="text/javascript").
-        $(function(){
-            //-  Temp disabled accessing blog information
-            //- var blogs = [];
-            //- let updates = $.get("blog/updates.json", function(data){
-            //-     data.map(b => {
-            //-         var container = $("<div class='post'>");
-            //-         var title = $("<h4>");
-            //-         var date = $("<span class='date'>");
-            //-         var content = $("<p class='content'>");
-
-            //-         title.html(b.title);
-            //-         date.html(b.date);
-            //-         content.html(b.content);
-
-            //-         container.append(title, date, content);
-            //-         $("#blog").prepend(container);
-            //-     });
-            //- });
+        document.addEventListener("DOMContentLoaded", function(){
             let uptimeChecker = [
                 { 
                     name: "JBVentures",
                     url: "https://zfoutz.com/clients/jbventures/",
-                    id: "uptime_jbventures"
+                    selector: "#uptime_jbventures"
                 }, 
                 {
                     name: "Shear Elegance",
                     url: "https://zfoutz.com/clients/shear-elegance",
-                    id: "uptime_shear"
+                    selector: "#uptime_shear"
                 }, 
                 {
                     name: "Newly Read",
                     url: "http://newlyread.com",
-                    id: "uptime_newlyread"
+                    selector: "#uptime_newlyread"
+                },
+                {
+                    name: "PCPAS",
+                    url: "http://zfoutz.com/clients/pcpas",
+                    selector: "#uptime_pcpas"
                 }
             ];
-            uptimeChecker.map(uptime => {
+            uptimeChecker.forEach(uptime => {
                 fetch("https://crossorigin.me/" + uptime.url)
                 .then(response => {
-                    //console.log(response);
-                    var el = $("#" + uptime.id);
-                    //console.log(el);
+                    var el = document.querySelector(uptime.selector);
                     switch(response.status){
                         case 502:
-                            $(el).text("status: down");
-                            $(el).css({
-                                background: 'red'
-                            });
-                            //console.log("Bad Gateway");
+                            el.innerHTML = "status: down";
+                            el.style.backgroundColor = 'red';
                             break;
 
                         case 200:
-                            $(el).text("status: ok");
-                            $(el).css({
-                                background: 'green'
-                            });
-                            //console.log("OK");
+                            el.innerHTML = "status: ok";
+                            el.style.backgroundColor = 'green';
                             break;
 
                         default:
-                            $(el).text("status: unknown");
-                            //console.log("unknown");
+                            el.innerHTML = "status: unknown";
+                            el.style.backgroundColor = 'gray';
                             break;
                     }
                 });
             });
-            
-        });
+        }, false);
+block scripts
+    

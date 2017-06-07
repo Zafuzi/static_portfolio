@@ -1,0 +1,41 @@
+div#skills
+
+block scripts
+    script.
+    //- Get languages from github then add them to the page
+        //- var languages = [];
+        //- function fetchRepos(_callback){
+        //-     fetch("https://api.github.com/users/zafuzi/repos")
+        //-     .then(response => {
+        //-         if(response.ok) return response.json();
+        //-         return Promise.reject(Error('error'))
+        //-     })
+        //-     .then(json => {
+        //-         var repos = json;
+                
+        //-         repos.forEach(repo => {
+        //-             if(!repo.fork){
+        //-                 fetch(repo.languages_url).then(response => {return response.json()})
+        //-                 .then(json => {
+        //-                     for(var k in json){
+        //-                         if(languages[k]){
+        //-                             languages[k].bytes += json[k];
+        //-                         }else{
+        //-                             languages[k] = {"language": k, "bytes": json[k]};
+        //-                         }
+        //-                     }
+        //-                 })
+        //-             }
+        //-         }, _callback());
+        //-     }).catch(error => {
+        //-         return Promise.reject(Error(error.message))
+        //-     });
+        //- };
+        //- fetchRepos(function(){
+        //-     for(var k in languages){
+        //-         console.log(k);
+        //-     }
+        //- });
+        
+        var skills = document.querySelector('#skills');
+        
