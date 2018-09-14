@@ -190,4 +190,28 @@ h4{
 }
 #misc_projects li {
     margin: 10px;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    background: #e1e1e1;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: .5;
+    transition: all .3s;
+}
+#misc_projects li:hover {
+    opacity: 1;
+}
+#misc_projects li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }

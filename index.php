@@ -5,8 +5,8 @@
     <title>Home | Zachary Foutz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Zachary Foutz - Zafuzi Industries">
-    <meta name="description" content="Zachary Foutz is a web engineer with 5 years of experience. He specializes in front end design and writes code in a myriad of languages.">
-    <meta name="keywords" content="web, web-developer, developer, web design, web designer, web developer for hire, developer for hire, bremerton, washington, bremerton washington, bremerton developer, bremerton web developer, bremerton web developer for hire, seattle developer, seattle web developer, seattle web developer for hire, seattle web, bremerton web, expert web developer, expert web designer">
+    <meta name="description" content="Zachary Foutz is a web engineer with over 5 years of experience. He specializes in front end design and mobile conversions. He can write PHP, Javscript, Python, and Java. If you need a modern website, Zach is your guy.">
+    <meta name="keywords" content="web, web-developer, developer, web design, web designer, web developer for hire, developer for hire, bremerton, washington, bremerton washington, bremerton developer, bremerton web developer, bremerton web developer for hire, seattle developer, seattle web developer, seattle web developer for hire, seattle web, bremerton web, expert web developer, expert web designer, find a web developer, what does a web developer do, web programmer, web developer information">
     <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="./bower_components/typicons.font/src/font/typicons.min.css">
@@ -88,10 +88,10 @@
             <h4>Other Projects</h4>
             <ul id="misc_projects">
                 <?php
-                    $files = scandir("../projects");
+                    $files = scandir("./projects");
                     foreach($files as $file) {
                         if(basename($file) != "." && basename($file) != "..") {
-                            echo "<li><a href=$file>".basename($file)."</a></li>";
+                            echo "<li><a href=projects/$file>".basename($file)."</a></li>";
                         }
                     }
                 ?>
