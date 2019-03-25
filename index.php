@@ -11,25 +11,26 @@
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="./bower_components/typicons.font/src/font/typicons.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async type="text/javascript" src="https://plausible.io/js/analytics.js"></script>
 </head>
 
 <body>
     <section id="intro">
         <div id="intro_message">
-            <h1>Zachary Foutz</h1>
-            <div class="contact">
-                <div class="row">
-                    <figure class="profile"><img src="images/profile.jpg" alt="Zachary Foutz profile picture"></figure>
+            <div class="grid name">
+                <figure class="profile"><img src="images/profile.jpg" alt="Zachary Foutz profile picture"></figure>
+                <h1 style="margin: 0;">Zachary Foutz 
+                    <p style="padding: 0; margin: 0; text-align: center; font-size: 1rem; font-weight: normal;">Web Developer specializing in UX design</p>
+                </h1>
+            </div>
+            <hr/>
+            <div class="contact" style="padding: 0; margin: 0;">
+                <div class="row" style="text-align: center;">
+                    <p><a href="tel:+13609900694">(360)990-0694</a></p>
+                    <p><a href="mailto:zacharyfoutz@gmail.com">zacharyfoutz@gmail.com</a></p>
+                    <a class="github-button"  style="margin: 0 auto;" href="https://github.com/zafuzi" data-size="large" data-show-count="true" aria-label="Follow @zafuzi on GitHub">@zafuzi on Github</a>
                 </div>
-                <h2>About Me</h2>
-                <div class="row">
-                    <p>I am a web developer with a passion for modern design. I have working knowledge of front-end techniques and specialize in mobile friendly designs. I love optimizing web apps and focusing on the tiniest of details. As cool as being
-                        a lone ranger is, working in a team is always faster and more fun.</p><br>
-                    <p><strong>Favorite Language: </strong><span>Javascript</span></p>
-                    <p><strong>Location: </strong><span>Bremerton Washington</span></p>
-                    <p><strong>Phone:</strong><a href="tel:+13609900694">(360)990-0694</a></p>
-                    <script async defer src="https://buttons.github.io/buttons.js"></script>
-                    <!-- Place this tag where you want the button to render. --><a class="github-button" href="https://github.com/zafuzi" data-size="large" data-show-count="true" aria-label="Follow @zafuzi on GitHub">Follow @zafuzi</a></div>
             </div>
         </div>
     </section>
@@ -50,48 +51,59 @@
     </section>
     <section id="s2">
         <div class="card">
-            <h2>Projects</h2>
+            <h2>Work</h2>
             <div class="gallery">
                 <div class="project">
-                    <div class="col-2"><img class="img-responsive" src="images/pcpas_screenshot.png"></div>
-                    <div class="col-2">
-                        <h3 class="link"> <a href="http://www.zfoutz.com/clients/pcpas" target="_blank"><span>PC Parts and Services</span><span class="uptime" id="uptime_pcpas"></span></a></h3>
+                    <div><img class="img-responsive" src="images/sleepless_nodes.png"></div>
+                    <div>
+                        <h3 class="link"> <a href="http://nodes.sleepless.con" target="_blank"><span>Sleepless Nodes</span></a></h3>
+                        <p class="url">nodes.sleepless.com</p>
+                        <p class="description">Sleepless Nodes is a site that allows anyone to upload a zip file and have it converted into a live website in seconds</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div><img class="img-responsive" src="images/pcpas_screenshot.png"></div>
+                    <div>
+                        <h3 class="link"> 
+                            <a href="http://www.zfoutz.com/clients/pcpas" target="_blank">PC Parts and Services</a>
+                        </h3>
                         <p class="url">www.zfoutz.com/clients/pcpas/</p>
                         <p class="description">PC Parts and Service is a local computer repair store that wanted a modern clean interface for their new one page site.</p>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="col-2"><img class="img-responsive" src="images/newlyread_screenshot.png"></div>
-                    <div class="col-2">
-                        <h3 class="link"> <a href="http://newlyread.com" target="_blank"> <span>NewlyRead</span><span class="uptime" id="uptime_newlyread"></span></a></h3>
+                    <div><img class="img-responsive" src="images/newlyread_screenshot.png"></div>
+                    <div>
+                        <h3 class="link"> <a href="http://newlyread.com" target="_blank"> <span>NewlyRead</span></a></h3>
                         <p class="url">http://newlyread.com</p>
                         <p class="description">NewlyRead is a simple news site that pulls articles from reliable sources and strips out ads.</p>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="col-2"><img class="img-responsive" src="images/shearElegance_screenshot.png"></div>
-                    <div class="col-2">
-                        <h3 class="link"><a href="http://www.zfoutz.com/clients/shear-elegance" target="_blank"><span>Shear Elegance</span><span class="uptime" id="uptime_shear"></span></a></h3>
+                    <div><img class="img-responsive" src="images/shearElegance_screenshot.png"></div>
+                    <div>
+                        <h3 class="link"><a href="http://www.zfoutz.com/clients/shear-elegance" target="_blank"><span>Shear Elegance</span></span></a></h3>
                         <p class="url">www.zfoutz.com/clients/shear-elegance/</p>
                         <p class="description">Shear Elegance is a website designed for a local hair salon.</p>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="col-2"><img class="img-responsive" src="images/jbventures_screenshot.png"></div>
-                    <div class="col-2">
-                        <h3 class="link"> <a href="http://www.zfoutz.com/clients/jbventures" target="_blank"><span>Modern Studio Equipment</span><span class="uptime" id="uptime_jbventures"></span></a></h3>
+                    <div><img class="img-responsive" src="images/jbventures_screenshot.png"></div>
+                    <div>
+                        <h3 class="link"> <a href="http://www.zfoutz.com/clients/jbventures" target="_blank"><span>Modern Studio Equipment</span></a></h3>
                         <p class="url">www.zfoutz.com/clients/jbventures/</p>
                         <p class="description">Modern Studio Equipment is a site that was built under contract from JB Ventures.</p>
                     </div>
                 </div>
             </div>
-            <h4>Other Projects</h4>
+            <h4 style="text-align: center;">Other Projects</h4>
+            <small style="text-align: center; width: 100%; display: block;"> (These may be broken) </small>
             <ul id="misc_projects">
                 <?php
                     $files = scandir("./projects");
                     foreach($files as $file) {
                         if(basename($file) != "." && basename($file) != "..") {
-                            echo "<li><a href=projects/$file>".basename($file)."</a></li>";
+                            echo "<li style='background-image: url(./projects/" . $file . "/screenshot.png);'><a href=projects/$file>".basename($file)."</a></li>";
                         }
                     }
                 ?>
