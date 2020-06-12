@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Shear Elegance | Hair Salon</title>
+    <link href="css/vendor/wing.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <span id="home"></span>
+
+    <header class="">
+      <nav class="navbar navabar-clear container">
+        <div class="row">
+          <a href="#" class="nav-button col-3">home</a>
+          <a href="#about" class="nav-button col-3">about</a>
+          <a href="#services" class="nav-button col-3">services</a>
+          <a href="#contact" class="nav-button col-3">contact</a>
+        </div>
+      </nav>
+
+    </header>
+    <div class="centered text-center landing-content">
+      <h1>
+        Shear
+        <span class="blue">Elegance</span>
+      </h1>
+
+      <a href="#about" class="btn btn-outline">learn more</a>
+    </div>
+    <main>
+      <!-- About Section -->
+      <section class="row section" id="about">
+        <article class="container text-left">
+          <h2>About Us</h2>
+        </article>
+        <article class="container text-left">
+          <p class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        </article>
+      </section>
+
+      <!-- Services Section -->
+      <section class="row section" id="services">
+        <article class="container text-left">
+          <h2>Our Services</h2>
+        </article>
+        <article class="container">
+          <div class="row service">
+            <h5 class="col-12">The Basics</h5>
+            <img class="col-2" src="img/scissors.svg"/>
+            <div class="col-9">
+              <p>Let our experienced master stylists give you the hair style you’ve always wanted.</p>
+              <p>
+                <small>For men, women, and children</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="row service">
+            <h5 class="col-12">Full Service</h5>
+            <img class="col-2 blue" src="img/shampoo.svg"/>
+            <p class="col-9">Relax, revitalize, and refresh with a pampered wash, fresh cut, and excellent styling.</p>
+          </div>
+
+          <div class="row service">
+            <h5 class="col-12">Color, Foils, and Highlights</h5>
+            <img class="col-2" src="img/color.svg"/>
+            <div class="col-9">
+              <p>- Deluxe, permanent color treatment leaves hair looking and feeling luxurious.</p>
+              <p>- Perfect mix of highlights and lowlights for a striking, yet natural look.</p>
+              <p>- Conditioning care or color refresh to keep hair vibrant.</p>
+            </div>
+          </div>
+
+          <div class="row service">
+            <h5 class="col-12">Chi Thermal Straightening</h5>
+            <img class="col-2" src="img/straight.svg"/>
+            <div class="col-9">
+              <p>Get your frizzy, curly, wavy, and even straight course hair under control. With a Chi Thermal Straightening you get a permanent straightening service, a deep conditioner, and a reconstruction service all in one!</p>
+              <p>You can color or even highlight your hair after the service, and it can be done on hair that has been permed, relaxed, colored, or highlighted.</p>
+            </div>
+          </div>
+
+        </article>
+      </section>
+
+      <!-- About Section -->
+      <section class="row section" id="contact">
+        <article class="container text-left">
+          <h2 class="center">
+            Contact Us
+          </h2>
+        </article>
+        <article class="container text-left">
+          <div class="col-6">
+
+            <h5>Hours</h5>
+            <p>Monday-Saturday | 10am to 6pm</p>
+            <p>Sunday's | Closed</p>
+
+            <address>
+              <a href="https://www.google.com/maps/place/32+NE+Silver+Pine+Dr+%23106,+Bremerton,+WA+98311/data=!4m2!3m1!1s0x54903a44b8e0cdd7:0x33b7a84c868b6dd8?sa=X&ved=0ahUKEwiwke2l87_NAhUU8GMKHaVPAEAQ8gEIHTAA">32 Silver Pine Drive, Suite 106 Bremerton, Wa 98311</a>
+            </address>
+
+            <a href="tel:1-360-204-1393">(360)204-1393</a>
+          </div>
+        </article>
+
+      </section>
+    </main>
+    <div class="credit ">Icons made by
+      <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+      from
+      <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+      is licensed by
+      <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </div>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script async defer type="text/javascript">
+      WebFontConfig = {
+        google: {
+          families: ['Roboto:400,500:latin', 'Lato:400,300,700:latin', 'Great+Vibes::latin']
+        }
+      };
+      (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <script async defer>
+      $(function () {
+        $('a[href*="#"]:not([href="#"])').click(function () {
+          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

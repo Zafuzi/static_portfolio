@@ -62,6 +62,19 @@
             <h2>Work</h2>
             <div class="gallery">
                 <div class="project">
+                    <div>
+                        <h3 class="link"> <a href="https://sleepless.com" target="_blank"><span>Sleepless</span></a></h3>
+                        <p class="url">sleepless.com</p>
+                        <p class="description">I am currently employed full time at Sleepless Inc. as a full-stack and games developer</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div>
+						<h3 class="link"> <a href="https://games.sleepless.com/" target="_blank"><span>Sleepless Games</span></a></h3>
+                        <p class="url">games.sleepless.com</p>
+                    </div>
+                </div>
+                <div class="project">
                     <div><img class="img-responsive" src="images/sleepless_nodes.png"></div>
                     <div>
                         <h3 class="link"> <a href="http://nodes.sleepless.con" target="_blank"><span>Sleepless Nodes</span></a></h3>
@@ -73,9 +86,9 @@
                     <div><img class="img-responsive" src="images/pcpas_screenshot.png"></div>
                     <div>
                         <h3 class="link"> 
-                            <a href="http://www.zfoutz.com/clients/pcpas" target="_blank">PC Parts and Services</a>
+                            <a href="https://pcpartsandservices.com/" target="_blank">PC Parts and Services</a>
                         </h3>
-                        <p class="url">www.zfoutz.com/clients/pcpas/</p>
+                        <p class="url">https://pcpartsandservices.com/</p>
                         <p class="description">PC Parts and Service is a local computer repair store that wanted a modern clean interface for their new one page site.</p>
                     </div>
                 </div>
@@ -90,20 +103,13 @@
                 <div class="project">
                     <div><img class="img-responsive" src="images/shearElegance_screenshot.png"></div>
                     <div>
-                        <h3 class="link"><a href="http://www.zfoutz.com/clients/shear-elegance" target="_blank"><span>Shear Elegance</span></span></a></h3>
-                        <p class="url">www.zfoutz.com/clients/shear-elegance/</p>
+                        <h3 class="link"><a href="http://www.zacharyfoutz.com/clients/shear-elegance" target="_blank"><span>Shear Elegance</span></span></a></h3>
+                        <p class="url">www.zacharyfoutz.com/clients/shear-elegance/</p>
                         <p class="description">Shear Elegance is a website designed for a local hair salon.</p>
                     </div>
                 </div>
-                <div class="project">
-                    <div><img class="img-responsive" src="images/jbventures_screenshot.png"></div>
-                    <div>
-                        <h3 class="link"> <a href="http://www.zfoutz.com/clients/jbventures" target="_blank"><span>Modern Studio Equipment</span></a></h3>
-                        <p class="url">www.zfoutz.com/clients/jbventures/</p>
-                        <p class="description">Modern Studio Equipment is a site that was built under contract from JB Ventures.</p>
-                    </div>
-                </div>
             </div>
+			<!--
             <h4 style="text-align: center;">Other Projects</h4>
             <small style="text-align: center; width: 100%; display: block;"> (These may be broken) </small>
             <ul id="misc_projects">
@@ -116,6 +122,7 @@
                     }
                 ?>
             </ul>
+			-->
         </div>
     </section>
     <script>
@@ -131,12 +138,12 @@
             let uptimeChecker = [
                 { 
                     name: "JBVentures",
-                    url: "https://zfoutz.com/clients/jbventures/",
+                    url: "http://zacharyfoutz.com/clients/jbventures/",
                     selector: "#uptime_jbventures"
                 }, 
                 {
                     name: "Shear Elegance",
-                    url: "https://zfoutz.com/clients/shear-elegance",
+                    url: "http://zacharyfoutz.com/clients/shear-elegance",
                     selector: "#uptime_shear"
                 }, 
                 {
@@ -146,7 +153,7 @@
                 },
                 {
                     name: "PCPAS",
-                    url: "http://zfoutz.com/clients/pcpas",
+                    url: "http://zacharyfoutz.com/clients/pcpas",
                     selector: "#uptime_pcpas"
                 }
             ];
